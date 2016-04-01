@@ -85,11 +85,6 @@ a:visited {
   clear: both;
 }
 
-.wrapper {
-  height: 1000px;
-  background-color: #eee;
-}
-
 .page-header {
   height: 200px;
   background-color: #fff;
@@ -99,7 +94,7 @@ a:visited {
 
 /* PC対応 */
 @media screen and ( min-width: 769px ) {
-  .index {
+  .wrapper {
     width: 100%;
     overflow-x: hidden;
 
@@ -541,7 +536,7 @@ a:visited {
     font-size: 0.9em;
   }
 
-  .index {
+  .wrapper {
     width: 100%;
     overflow-x: hidden; // スマホの右余白を消す設定
 

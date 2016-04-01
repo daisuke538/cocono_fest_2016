@@ -47,7 +47,7 @@ html
           var href= $( this ).attr( 'href' );
 
           // トップページの場合はページ内スムーススクロール
-          if( $( '.index' ).length ) {
+          if( $( '#index' ).length ) {
             var target = $( href == '#' || href == '' ? 'html' : href );
             var position = target.offset().top;
 
