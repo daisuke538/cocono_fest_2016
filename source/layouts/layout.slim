@@ -42,15 +42,22 @@ html
     javascript:
       $( function(){
         // ページ内リンクのスムーズスクロール
-        $( 'a[href^="#"]' ).on( 'click', function() {
+        $( 'a[href^="#"]:not([href$="#"])' ).on( 'click', function() {
           var speed = 500;
           var href= $( this ).attr( 'href' );
-          var target = $( href == '#' || href == '' ? 'html' : href );
-          var position = target.offset().top;
 
-          $( 'html, body' ).animate( {scrollTop:position}, speed, 'swing' );
+          // トップページの場合はページ内スムーススクロール
+          if( $( '.index' ).length ) {
+            var target = $( href == '#' || href == '' ? 'html' : href );
+            var position = target.offset().top;
 
-          return false;
+            $( 'html, body' ).animate( {scrollTop:position}, speed, 'swing' );
+          // トップページ以外の場合はページ遷移
+          } else {
+            window.location.href = 'http://' + location.host + '/' + href;
+          }
+
+          //return false;
         });
 
         $( '.info-view' ).on( 'inview', function( isInView, visiblePartX, visiblePartY ) {
