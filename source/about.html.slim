@@ -7,15 +7,15 @@ keywords: 福岡,九州,フェス,音楽
 
 og_title: 'cocono fest. 2016｜About'
 og_type: website
-og_url: 'http://coconofest.asia'
+og_url: 'http://coconofest.asia/about.html'
 og_description: 九州の音楽を地元へ、全国へ発信する。九州が舞台のDIYフェス。
-og_image: 'http://coconofest.asia/images/about/ogp.png'
+og_image: 'http://coconofest.asia/images/ogp.png'
 ---
 
 main.wrapper#about
   article.page-header
     .page-header-icon
-      = link_to "#{image_tag '/images/about.png', :alt => 'About'}", '/about.html'
+      = image_tag '/images/about.png', :alt => 'About'
       .icon-title-top-line
       h3 About
   article.page-container
@@ -23,7 +23,46 @@ main.wrapper#about
       h1 Message
       .heading-bottom-line-black
       h3 主催者からのメッセージ
+    .message-inner
+      | テストテストテストテストテストテスト
+      br
+      | テストテストテストテストテストテスト
+      br
+      | テストテストテストテストテストテスト
     section.page-heading
       h1 Event Outline
       .heading-bottom-line-black
       h3 開催概要
+    .event-outline-inner
+      dl
+        dt
+          | タイトル
+        dd
+          | cocono fest. 2016
+        .clearfix
+        hr
+        dt
+          | 日時
+        dd
+          | 2016年9月17日（土）
+          br
+          | 開場 12:00 / 開演 12:30 / 終演 21:00（予定）
+        .clearfix
+        hr
+        dt
+          | 会場
+        dd
+          | 福岡市 スカラエスパシオ
+          br
+          | 〒810-0004 福岡県福岡市中央区渡辺通4丁目8−28 F.TビルB2
+          br
+          br
+          iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.733400013413!2d130.39963255016855!3d33.586270649495454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541919abe78fded%3A0x18f611fe71aa9768!2z44K544Kr44Op44Ko44K544OR44K344Kq!5e0!3m2!1sja!2sjp!4v1459520254073" width="600" height="340" frameborder="0" style="border:0" allowfullscreen
+        .clearfix
+        hr
+        dt
+          | 主催
+        dd
+          | cocono fest. 実行委員会
+        .clearfix
+        hr

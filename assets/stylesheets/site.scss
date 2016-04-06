@@ -42,6 +42,26 @@ a:visited {
   color: black;
 }
 
+.no-link a {
+  pointer-events: none;
+
+  img {
+    opacity: 0.3;
+  }
+}
+
+.clearfix {
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #eee;
+  overflow-x: hidden;
+}
+
 .heading-bottom-line-black,
 .heading-bottom-line-white {
   width: 30px;
@@ -79,25 +99,11 @@ a:visited {
   box-sizing: border-box;
 }
 
-.clearfix {
-  margin: 0;
-  padding: 0;
-  clear: both;
-}
-
-.page-header {
-  height: 200px;
-  background-color: #fff;
-  border: 1px solid;
-}
 
 
 /* PC対応 */
 @media screen and ( min-width: 769px ) {
   .wrapper {
-    width: 100%;
-    overflow-x: hidden;
-
     .pattern-first {
       position: absolute;
       height: 100%;
@@ -357,110 +363,110 @@ a:visited {
         }
       }
     }
-  }
 
-  .contact-view {
-    position: absolute;
-    height: 460px;
-    top: calc( 710px + 680px + 800px + 100% ); // info-viewのheight+news-viewのheight+lineup-viewのheight+100%
-    left: 0;
-    background-color: #eee;
-    z-index: 30;
+    .contact-view {
+      position: absolute;
+      height: 460px;
+      top: calc( 710px + 680px + 800px + 100% ); // info-viewのheight+news-viewのheight+lineup-viewのheight+100%
+      left: 0;
+      background-color: #eee;
+      z-index: 30;
 
-    .contact-box {
-      top: calc( 710px + 680px + 800px + 100% ); // gallery-viewのtopを同じ値
-      text-align: center;
-      color: black;
+      .contact-box {
+        top: calc( 710px + 680px + 800px + 100% ); // gallery-viewのtopを同じ値
+        text-align: center;
+        color: black;
 
-      .contact-inner {
-        display: flex;
-        display: -webkit-flex; // Safari
-        align-items: center;
-        -webkit-align-items: center; // Safari
-        justify-content: center;
-        -webkit-justify-content: center; // Safari
-        align-content: stretch;
-        -webkit-align-content: stretch; // Safari
-        flex-wrap: wrap;
-        -webkit-flex-wrap: wrap;
-        width: 100%;
-        margin: 0 auto;
-        margin-bottom: 40px;
+        .contact-inner {
+          display: flex;
+          display: -webkit-flex; // Safari
+          align-items: center;
+          -webkit-align-items: center; // Safari
+          justify-content: center;
+          -webkit-justify-content: center; // Safari
+          align-content: stretch;
+          -webkit-align-content: stretch; // Safari
+          flex-wrap: wrap;
+          -webkit-flex-wrap: wrap;
+          width: 100%;
+          margin: 0 auto;
+          margin-bottom: 40px;
 
-        img {
-          display: inline-block;
-          width: 100px;
-          height: 100px;
-          margin-left: 20px;
-          margin-right: 20px;
+          img {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
 
-          &:hover {
-            transition: 0.6s;
-            opacity: 0.6;
+            &:hover {
+              transition: 0.6s;
+              opacity: 0.6;
+            }
           }
         }
       }
     }
-  }
 
-  .gallery-view {
-    position: absolute;
-    min-height: 100%;
-    top: calc( 710px + 680px + 800px + 460px + 100% ); // info-viewのheight+news-viewのheight+lineup-viewのheight+100%
-    left: 0;
-    background-color: black;
-    z-index: 30;
+    .gallery-view {
+      position: absolute;
+      min-height: 100%;
+      top: calc( 710px + 680px + 800px + 460px + 100% ); // info-viewのheight+news-viewのheight+lineup-viewのheight+100%
+      left: 0;
+      background-color: black;
+      z-index: 30;
 
-    .gallery-box {
-      top: calc( 710px + 680px + 800px + 460px + 100% ); // gallery-viewのtopを同じ値
-      text-align: center;
-      color: white;
+      .gallery-box {
+        top: calc( 710px + 680px + 800px + 460px + 100% ); // gallery-viewのtopを同じ値
+        text-align: center;
+        color: white;
 
-      .gallery-inner {
-        width: 100%;
-        margin: 0 auto;
-
-        #instafeed {
-          width: 88%;
+        .gallery-inner {
+          width: 100%;
           margin: 0 auto;
-          text-align: center;
 
-          li {
-            display: inline-block;
-            width: 17%;
-            margin-top: 8px;
-            margin-left: 8px;
-            margin-right: 8px;
+          #instafeed {
+            width: 88%;
+            margin: 0 auto;
+            text-align: center;
 
-            img {
+            li {
+              display: inline-block;
+              width: 17%;
+              margin-top: 8px;
+              margin-left: 8px;
+              margin-right: 8px;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          #load-more {
+            width: 230px;
+            height: 50px;
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 100px;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 300;
+            color: white;
+            border: 1px solid white;
+            background-color: inherit;
+
+            a {
+              display: inline-block;
               width: 100%;
-            }
-          }
-        }
+              height: calc( 100% - 14px );
+              padding-top: 14px;
+              text-decoration: none;
 
-        #load-more {
-          width: 230px;
-          height: 50px;
-          margin: 0 auto;
-          margin-top: 40px;
-          margin-bottom: 100px;
-          text-align: center;
-          font-size: 1.1em;
-          font-weight: 300;
-          color: white;
-          border: 1px solid white;
-          background-color: inherit;
-
-          a {
-            display: inline-block;
-            width: 100%;
-            height: calc( 100% - 14px );
-            padding-top: 14px;
-            text-decoration: none;
-
-            &:link,
-            &:visited {
-              color: white;
+              &:link,
+              &:visited {
+                color: white;
+              }
             }
           }
         }
@@ -468,6 +474,105 @@ a:visited {
     }
   }
 
+  /* other page */
+  .page-header {
+    height: 210px;
+    background-color: #fff;
+
+    .page-header-icon {
+
+    }
+
+    .page-header-icon img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  .page-container {
+    width: 80%;
+    margin: 0 auto;
+
+    .heading-bottom-line-black,
+    .heading-bottom-line-white {
+      width: 30px;
+      height: 4px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .page-heading {
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 0;
+      padding-bottom: 70px;
+      border-top: 1px solid transparent;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  /* about */
+  #about {
+    .message-inner {
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .event-outline-inner {
+      width: 100%;
+      text-align: left;
+
+      hr {
+        margin: 14px 0;
+      }
+
+      dl {
+        dt {
+          float: left;
+          width: 100px;
+        }
+
+        dd {
+          float: left;
+          width: 78%;
+          margin-left: 30px;
+
+          iframe {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  /* archive */
+  #archive {
+    .archive-inner {
+      width: 100%;
+      text-align: left;
+
+      .event-left {
+        float: left;
+        width: 58%;
+        border: 1px solid;
+      }
+
+      .event-right {
+        float: right;
+        width: 40px;
+        border: 1px solid;
+      }
+    }
+  }
+
+  /* footer */
   .nav-wrapper {
     float: left;
     width: 80%;
@@ -521,6 +626,9 @@ a:visited {
       margin-top: 10px;
     }
   }
+
+
+
 }
 
 
@@ -537,9 +645,6 @@ a:visited {
   }
 
   .wrapper {
-    width: 100%;
-    overflow-x: hidden; // スマホの右余白を消す設定
-
     .pattern-first {
       position: absolute;
       height: 800px; // top-viewと同じ高さ
@@ -866,59 +971,59 @@ a:visited {
         }
       }
     }
+  }
 
-    .nav-wrapper {
-      float: left;
-      width: 80%;
-      //border: 1px solid;
+  .nav-wrapper {
+    float: left;
+    width: 80%;
+    //border: 1px solid;
 
-      .nav-inner {
-        display: flex;
-        display: -webkit-flex; // Safari
-        align-items: flex-start; // 垂直方向
-        -webkit-align-items: flex-start; // Safari
-        justify-content: flex-start; // 水平方向
-        -webkit-justify-content: flex-start; // Safari
-        align-content: stretch;
-        -webkit-align-content: stretch; // Safari
-        width: 100%;
-        height: 64px;
-        margin-top: 4px;
-        margin-left: 6px;
-        text-align: center;
+    .nav-inner {
+      display: flex;
+      display: -webkit-flex; // Safari
+      align-items: flex-start; // 垂直方向
+      -webkit-align-items: flex-start; // Safari
+      justify-content: flex-start; // 水平方向
+      -webkit-justify-content: flex-start; // Safari
+      align-content: stretch;
+      -webkit-align-content: stretch; // Safari
+      width: 100%;
+      height: 64px;
+      margin-top: 4px;
+      margin-left: 6px;
+      text-align: center;
 
-        .nav-card {
-          width: 50px;
-          margin-right: 4px;
-          //border: 1px solid;
-          opacity: 0.6;
+      .nav-card {
+        width: 50px;
+        margin-right: 4px;
+        //border: 1px solid;
+        opacity: 0.6;
 
-          .nav-icon {
-            img {
-              width: 30px;
-              height: 30px;
-              margin: 0, auto;
-            }
-          }
-
-          .nav-name {
-            font-size: 0.6em;
+        .nav-icon {
+          img {
+            width: 30px;
+            height: 30px;
+            margin: 0, auto;
           }
         }
-      }
 
+        .nav-name {
+          font-size: 0.6em;
+        }
+      }
     }
 
-    .scroll-to-top {
-      float: right;
-      margin-right: 10px;
-      opacity: 0.6;
+  }
 
-      img {
-        width: 34px;
-        height: 34px;
-        margin-top: 11px;
-      }
+  .scroll-to-top {
+    float: right;
+    margin-right: 10px;
+    opacity: 0.6;
+
+    img {
+      width: 34px;
+      height: 34px;
+      margin-top: 11px;
     }
   }
 }
