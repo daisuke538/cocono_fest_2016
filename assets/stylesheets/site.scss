@@ -58,7 +58,7 @@ a:visited {
 
 .wrapper {
   width: 100%;
-  background-color: #eee;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -695,7 +695,7 @@ a:visited {
 
       .top-box {
         position: absolute;
-        top: 10%;
+        top: 20%;
         left: auto;
         right: auto;
         text-align: center;
@@ -708,7 +708,7 @@ a:visited {
         }
 
         .top-description {
-          margin-top: 40px;
+          margin-top: 60px;
           font-size: 1em;
 
           p {
@@ -777,7 +777,7 @@ a:visited {
     }
 
     .news-view {
-      height: 800px;
+      padding-bottom: 50px;
       background-image: url( "/images/section_third_image_sp@2x.jpg" );
       background-attachment: scroll;
       background-position: center center;
