@@ -15,7 +15,13 @@ og_image: 'http://coconofest.asia/images/ogp.png'
 main.wrapper#index
   article.cover.top-view#top
     .top-box class="box-fix"
-      | トップ
+      = image_tag '/images/main_logo.png', :alt => 'main logo'
+      .top-description
+        p
+          | 九州の音楽を地元へ、全国へ発信
+        br
+        p
+          | 九州が舞台のDIYフェス
   .pattern-first
   article.info-view#info
     section.info-box
