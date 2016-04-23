@@ -2,30 +2,35 @@ footer
   nav.nav-wrapper
     .nav-inner
       .nav-card
-        .nav-icon
-          = link_to "#{image_tag '/images/info.png', :alt => 'Info'}", '#info'
-        .nav-name
-          | Info
+        = link_to '#info'
+          .nav-icon
+            = image_tag '/images/info.png', :alt => 'Info'
+          .nav-name
+            | Info
       .nav-card
-        .nav-icon
-          = link_to "#{image_tag '/images/news.png', :alt => 'News'}", '#news'
-        .nav-name
-          | News
+        = link_to '#news'
+          .nav-icon
+            = image_tag '/images/news.png', :alt => 'News'
+          .nav-name
+            | News
       .nav-card
-        .nav-icon
-          = link_to "#{image_tag '/images/lineup.png', :alt => 'Line-Up'}", '#lineup'
-        .nav-name
-          | Line-Up
+        = link_to '#lineup'
+          .nav-icon
+            = image_tag '/images/lineup.png', :alt => 'Line-Up'
+          .nav-name
+            | Line-Up
       .nav-card
-        .nav-icon
-          = link_to "#{image_tag '/images/contact.png', :alt => 'Contact'}", '#contact'
-        .nav-name
-          | Contact
+        = link_to '#contact'
+          .nav-icon
+            = image_tag '/images/contact.png', :alt => 'Contact'
+          .nav-name
+            | Contact
       .nav-card
-        .nav-icon
-          = link_to "#{image_tag '/images/gallery.png', :alt => 'Gallery'}", '#gallery'
-        .nav-name
-          | Gallery
+        = link_to '#gallery'
+          .nav-icon
+            = image_tag '/images/gallery.png', :alt => 'Gallery'
+          .nav-name
+            | Gallery
   .scroll-to-top
     = link_to "#{image_tag '/images/scroll_to_top.png', :alt => 'Scroll To Top'}", '#top'
   .clearfix

@@ -42,11 +42,14 @@ a:visited {
   color: black;
 }
 
-.no-link a {
-  pointer-events: none;
+// no link
+.timetable-icon {
+  a {
+    pointer-events: none;
 
-  img {
-    opacity: 0.3;
+    img {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -219,14 +222,19 @@ a:visited {
         .info-icon-bottom {
           display: flex;
           display: -webkit-flex; // Safari
+          display: -moz-flex; // Firefox
           align-items: center;
           -webkit-align-items: center; // Safari
+          -moz-align-items: center; // Firefox
           justify-content: space-around;
           -webkit-justify-content: space-around; // Safari
+          -moz-justify-content: space-around; // Firefox
           align-content: stretch;
           -webkit-align-content: stretch; // Safari
+          -moz-align-content: stretch; // Firefox
           flex-wrap: wrap;
-          -webkit-flex-wrap: wrap;
+          -webkit-flex-wrap: wrap; // Safari
+          -moz-flex-wrap: wrap; // Firefox
           width: 100%;
           margin: 0 auto;
           margin-bottom: 30px;
@@ -629,16 +637,20 @@ a:visited {
         //border: 1px solid;
         opacity: 0.6;
 
-        .nav-icon {
-          img {
-            width: 44px;
-            height: 44px;
-            margin: 0, auto;
-          }
-        }
+        a {
+          text-decoration: none;
 
-        .nav-name {
-          font-size: 0.8em;
+          .nav-icon {
+            img {
+              width: 44px;
+              height: 44px;
+              margin: 0, auto;
+            }
+          }
+
+          .nav-name {
+            font-size: 0.8em;
+          }
         }
       }
     }
@@ -771,14 +783,19 @@ a:visited {
         .info-icon-bottom-sp {
           display: flex;
           display: -webkit-flex; // Safari
+          display: -moz-flex;
           align-items: center;
           -webkit-align-items: center; // Safari
+          -moz-align-items: center;
           justify-content: space-around;
           -webkit-justify-content: space-around; // Safari
+          -moz-justify-content: space-around;
           align-content: stretch;
           -webkit-align-content: stretch; // Safari
+          -moz-align-content: stretch;
           flex-wrap: wrap;
           -webkit-flex-wrap: wrap;
+          -moz-flex-wrap: wrap;
           width: 100%;
           margin: 0 auto;
           margin-bottom: 30px;
@@ -1061,16 +1078,25 @@ a:visited {
         //border: 1px solid;
         opacity: 0.6;
 
-        .nav-icon {
-          img {
-            width: 30px;
-            height: 30px;
-            margin: 0, auto;
-          }
-        }
+        a {
+          text-decoration: none;
 
-        .nav-name {
-          font-size: 0.6em;
+          .nav-icon {
+            img {
+              width: 30px;
+              height: 30px;
+              margin: 0, auto;
+            }
+          }
+
+          .nav-name {
+            font-size: 0.6em;
+
+            a {
+              text-decoration: none;
+
+            }
+          }
         }
       }
     }
